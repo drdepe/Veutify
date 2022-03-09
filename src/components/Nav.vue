@@ -22,11 +22,27 @@
              </v-toolbar-title>
 
       </v-toolbar>
-      <v-navigation-drawer  v-model='drawer' app  >
-        <p>test</p>
+      <v-navigation-drawer  v-model='drawer' app class="indigo" >
+       
+        <v-list>
+
+          <v-list-tile v-for='page in pages' :key="page.text"  :to='page.route'>
+            <v-list-tile-action>
+              <v-icon class="white--text">{{page.icon}}</v-icon>
+            </v-list-tile-action>
+            <v-list-tile-content>
+              <v-list-tile-tittle class="white--text">
+                {{page.text}}
+              </v-list-tile-tittle>
+            </v-list-tile-content>
+          </v-list-tile>
+         
+          
+        </v-list>
+
       </v-navigation-drawer>
 <br>
-      <v-btn v-on:click='() => this.drawer = !this.drawer'>drawer</v-btn>
+      <v-btn v-on:click='() => this.drawer = !this.drawer' class="mx-4">drawer</v-btn>
   </nav>
 </template>
 
@@ -34,9 +50,15 @@
 export default {
 data(){
   return{
-    drawer:false
+    drawer:false,
+      pages:[
+        {icon:'dashboard',text:'dashboard',route:"/"},
+        {icon:'settings',text:'settings',route:"/settings"},
+        {icon:'users',text:'users',route:"/users"},
+        {icon:'likes',text:'likes',route:"/likes"},
+      ]
+    }
   }
-}
 }
 </script>
 

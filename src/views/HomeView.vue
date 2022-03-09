@@ -41,13 +41,58 @@
   <br><br>
   <!-- fab buttons -->
   this is a happy fab : 
-  <v-btn fab color="red white--text">f</v-btn>
+  <v-btn fab color="info white--text ml-7">f</v-btn>
   <br> <br>
   this is a depressed fab : 
   <v-btn fab depressed color="red white--text">f</v-btn>
   <br>
   <br>
   <br>
+  <!-- padding and margin  -->
+  <!-- how we use them :
+  prpertydirection-size in a class  -->
+
+<!--   
+  properties :
+   m- for margin 
+   p- padding 
+  directions:
+   a-  all
+   t-  top
+   b-  bottom
+   l-  left 
+   r-  right
+   x- left and right
+   y- bottom and top 
+  sizes : 
+    -auto 
+    -0 : $spacer * 0
+    -1 : $spacer * .25
+    -2 : $spacer * .50
+    -3 : $spacer 
+    -4 : $spacer  * 1.5
+    -5 : $spacer  * 3
+ -->
+
+<v-btn class="indigo ml-7 mb-4" dark> test </v-btn>
+<br><br>
+
+  <!-- Grid System -->
+  <v-container>
+    <v-layout row>
+      <v-flex xs12 md6 >
+        <v-btn outlined dark block class="primary ma-1"> test </v-btn>
+      </v-flex> 
+     <v-flex xs12 md6 >
+        <v-btn outlined dark block class="primary ma-1"> test2 </v-btn>
+      </v-flex>
+     <v-flex xs12 md6 >
+        <v-btn outlined dark block class="primary ma-1"> test3 </v-btn>
+      </v-flex>
+
+    </v-layout>
+  </v-container>
+
 </center>
 </div>
 </template>
